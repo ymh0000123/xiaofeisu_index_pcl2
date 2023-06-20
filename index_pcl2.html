@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PCL2主页</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="https://unpkg.com/element-plus/dist/index.full.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/ico" href="/xiaofeishu.github.io/file/ico.png">
+  	<script>
+	function copyToClipboard(text) {
+        var input = document.createElement('input');
+        input.setAttribute('value', text);
+        document.body.appendChild(input);
+        input.select();
+        var result = document.execCommand('copy');
+        document.body.removeChild(input);
+
+        if (result) {
+            alert('恭喜你，复制成功');
+        } else {
+            alert('复制失败，请手动复制');
+        }
+    }
+   </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+      padding: 8px 12px;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #e0e0e0;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer img {
+      max-width: 800px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>PCL2主页</h1>
+    <ul>
+      <li><a href="index.html">[<]返回</a></li>
+      <li><a href="about.html">关于</a></li>
+    </ul>
+    </div>
+
+  <div class="footer">
+    <img src="https://s2.loli.net/2023/05/04/ZruPSxwyGvMgW2h.png" alt="Footer Image">
+  </div>
+  </p>
+  <div class="container">
+  <h1>安装方法</h1>
+  <p>1.点击设置</p>
+  <p>2.点击个性化</p>
+  <p>3.找到[自定义主页]卡片</p>
+  <p>4.点击[联网更新]</p>
+  <p>5.点击复制到[下载地址](GitHub)>>>><a href="javascript:void(0);" onclick="copyToClipboard('https://ymh0000123.github.io/xiaofeishu.github.io/mc/Custom.xaml')">点击我复制</a><<<<</p>
+  <p>5.点击复制到[下载地址](raw.iqiq.io加速)>>>><a href="javascript:void(0);" onclick="copyToClipboard('https://raw.iqiq.io/ymh0000123/xiaofeishu.github.io/main/mc/Custom.xaml')">点击我复制</a><<<<</p>
+  <p>6.关闭PCL2重新打开就可以了</p>
+  </div>
+  <img alt="今日诗词" src="https://v2.jinrishici.com/one.svg" style="max-width:100%; display: block; margin: 0 auto;">
+</body>
+</html>
