@@ -1,0 +1,77 @@
+﻿     <StackPanel.Triggers>
+      <EventTrigger RoutedEvent="StackPanel.Loaded">
+        <BeginStoryboard>
+          <Storyboard x:Name="animation1" RepeatBehavior="Forever">
+            <ColorAnimation Storyboard.TargetName="NewsHint" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF000000" To="#FF000000" Duration="0:0:0" />
+            <ColorAnimation BeginTime="0:0:5" Storyboard.TargetName="NewsHint" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF000000" To="#00000000" Duration="0:0:1" />
+            <ColorAnimation BeginTime="0:0:13" Storyboard.TargetName="NewsHint" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#00000000" To="#FF000000" Duration="0:0:1" />
+            <ColorAnimation Storyboard.TargetName="Hint2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#00000000" To="#00000000" Duration="0:0:0" />
+            <ColorAnimation BeginTime="0:0:6" Storyboard.TargetName="Hint2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#00000000" To="#FF000000" Duration="0:0:1" />
+            <ColorAnimation BeginTime="0:0:12" Storyboard.TargetName="Hint2" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" From="#FF000000" To="#00000000" Duration="0:0:1" />
+          </Storyboard>
+        </BeginStoryboard>
+      </EventTrigger>
+    </StackPanel.Triggers>
+ <Border Margin="0,0,0,10" Padding="2,8" BorderThickness="1" Background="{DynamicResource ColorBrush5}" CornerRadius="5" VerticalAlignment="Top" BorderBrush="{DynamicResource ColorBrush3}" Opacity="0.7">
+      <Grid Margin="10,0,0,0">
+        <TextBlock x:Name="NewsHint" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#FF000000">
+                📰 hello。
+    </TextBlock>
+        <TextBlock x:Name="Hint2" FontWeight="Bold" FontSize="12" VerticalAlignment="Center" Foreground="#00000000">
+                📰 hello。
+    </TextBlock>
+      </Grid>
+    </Border>
+<local:MyCard Title="一些提醒" Margin="0,0,0,15" CanSwap="False" IsSwaped="False">
+    <StackPanel Margin="25,40,23,15">
+	        <local:MyHint Margin="0,8,0,2" IsWarn="False"
+                    Text="这只是提醒。" />
+        <local:MyHint Text="虽然现在危险暂时解除但是还是不建议大家去下载模组。"/>
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+				  <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                   Text="查看自己是否感染" EventType="打开网页" EventData="https://www.bilibili.com/video/BV11j411Q7dW" />
+		</StackPanel>
+		<local:MyHint Text="1.16.5/4 多人游戏功能被禁用。" />
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+		  <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                   Text="fabric修复模组" EventType="打开网页" EventData="https://github.com/ChickenPige0n/offline-multiplayer-fabric/releases" />
+		  <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                   Text="通用修复" EventType="打开网页" EventData="https://www.bilibili.com/read/cv24255902" />
+
+		</StackPanel>
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="工具" CanSwap="True" IsSwaped="True" Margin="0,0,0,15">
+    <StackPanel Margin="25,40,23,15">
+        <local:MyHint Margin="0,0,0,7" IsWarn="False"
+                   Text="小工具。" />
+        <!-- 这是第一行 -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight"
+                   Text="打开 seed-map" EventType="打开网页" EventData="https://www.chunkbase.com/apps/seed-map" />
+            <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight"
+                   Text="打开littleskin" EventType="打开网页" EventData="https://littleskin.cn/auth/login" />
+        </StackPanel>
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="关于" CanSwap="True" IsSwaped="True" Margin="0,0,0,15">
+ <StackPanel Margin="25,40,23,15">
+   <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+       <TextBlock TextWrapping="Wrap" Margin="0,0,0,4"
+         Text="这个主页是没用的小废鼠维护+制作的。" />
+   </StackPanel>
+  <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+
+    <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0" ColorType="Highlight"
+        Text="打开 B 站主页" EventType="打开网页" EventData="https://space.bilibili.com/1783868793" />
+	<local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+         Text="刷新主页" EventType="刷新主页" EventData="刷新主页" />
+  </StackPanel>
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10,0,0">
+        <local:MyButton Margin="0,0,10,0" Width="200" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
+                   Text="打开没用的小废鼠的官网" EventType="打开网页" EventData="https://ymh0000123.github.io/xiaofeishu.github.io/" />
+        </StackPanel>
+ </StackPanel>
+</local:MyCard>
