@@ -26,11 +26,7 @@
     <StackPanel Margin="25,40,23,15">
 	        <local:MyHint Margin="0,8,0,2" IsWarn="False"
                     Text="这只是提醒。" />
-        <local:MyHint Text="虽然现在危险暂时解除但是还是不建议大家去下载模组。"/>
-		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-				  <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
-                   Text="查看自己是否感染" EventType="打开网页" EventData="https://www.bilibili.com/video/BV11j411Q7dW" />
-		</StackPanel>
+        <local:MyHint Text="最近api.minecraftservices.com(微软账号验证)会被被跳转到到反诈页面。"/>
 		<local:MyHint Text="1.16.5/4 多人游戏功能被禁用。" />
 		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 		  <local:MyButton Margin="0,0,10,0" Width="140" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
