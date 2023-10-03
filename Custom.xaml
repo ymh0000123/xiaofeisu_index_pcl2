@@ -66,8 +66,7 @@
          Text="刷新主页" EventType="刷新主页" EventData="刷新主页" />
   </StackPanel>
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10,0,0">
-        <local:MyButton Margin="0,0,10,0" Width="200" Height="35" HorizontalAlignment="Left" Padding="13,0,13,0"
-                   Text="打开没用的小废鼠的官网" EventType="打开网页" EventData="https://ymh0000123.github.io/xiaofeishu.github.io/" />
+        <local:MyListItem Margin="-2,0,0,0" Logo="https://ymh0000123.github.io/ico.png" Title="GitHub" Info="Let's build from here" EventType="打开网页" EventData="https://ymh0000123.github.io" Type="Clickable" />
         </StackPanel>
  </StackPanel>
 </local:MyCard>
