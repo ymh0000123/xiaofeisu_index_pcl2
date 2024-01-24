@@ -1,28 +1,26 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>PCL2主页</title>
-  <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
-  <script src="https://unpkg.com/vue@next"></script>
-  <script src="https://unpkg.com/element-plus/dist/index.full.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" type="image/ico" href="/xiaofeishu.github.io/file/ico.png">
-  	<script>
-	function copyToClipboard(text) {
-        var input = document.createElement('input');
-        input.setAttribute('value', text);
-        document.body.appendChild(input);
-        input.select();
-        var result = document.execCommand('copy');
-        document.body.removeChild(input);
+<html lang="ch">
 
-        if (result) {
-            alert('恭喜你，复制成功');
-        } else {
-            alert('复制失败，请手动复制');
-        }
+<head>
+  <meta charset="UTF-8">
+  <title>PCL2主页</title>
+  <link rel="shortcut icon" type="image/ico" href="https://xiaofeishu-picture.pages.dev/picture/5.png">
+  <script>
+    function copyToClipboard(text) {
+      var input = document.createElement('input');
+      input.setAttribute('value', text);
+      document.body.appendChild(input);
+      input.select();
+      var result = document.execCommand('copy');
+      document.body.removeChild(input);
+
+      if (result) {
+        alert('恭喜你，复制成功');
+      } else {
+        alert('复制失败，请手动复制');
+      }
     }
-   </script>
+  </script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -73,25 +71,51 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <h1>PCL2主页</h1>
-    </div>
+    <h1><iconify-icon icon="gridicons:pages"></iconify-icon>PCL2主页</h1>
+    <div id="ys"><iconify-icon icon="svg-spinners:180-ring-with-bg"></iconify-icon>原神好句API正在加载...</div>
+
+  </div>
 
   <div class="footer">
-    <img src="https://s2.loli.net/2023/05/04/ZruPSxwyGvMgW2h.png" alt="Footer Image">
+    <img src="https://xiaofeishu-picture.pages.dev/picture/bj.png" alt="Footer Image">
   </div>
   </p>
   <div class="container">
-  <h1>安装方法</h1>
-  <p>1.点击设置</p>
-  <p>2.点击个性化</p>
-  <p>3.找到[自定义主页]卡片</p>
-  <p>4.点击[联网更新]</p>
-  <p>5.点击复制到[下载地址](GitHub)>>>><a href="javascript:void(0);" onclick="copyToClipboard('https://ymh0000123.github.io/xiaofeisu_index_pcl2/Custom.xaml')">点击我复制</a><<<<</p>
-  <p>5.点击复制到[下载地址](hub.gitmirror.com加速)>>>><a href="javascript:void(0);" onclick="copyToClipboard('https://hub.gitmirror.com/https://raw.githubusercontent.com/ymh0000123/xiaofeisu_index_pcl2/main/Custom.xaml')">点击我复制</a><<<<</p>
-  <p>6.关闭PCL2重新打开就可以了</p>
+    <h2>安装方法</h2>
+    <a href="https://xiaofeisu-pcl2.pages.dev/"><iconify-icon icon="logos:cloudflare-icon"></iconify-icon>Cloudflare
+      Pages镜像</a>
+    <p>1.点击设置</p>
+    <p>2.点击个性化</p>
+    <p>3.找到[自定义主页]卡片</p>
+    <p>4.点击[联网更新]</p>
+    <p>5.点击复制到[下载地址]<a href="javascript:void(0);"
+        onclick="copyToClipboard('https://ymh0000123.github.io/xiaofeisu_index_pcl2/Custom.xaml')">[<iconify-icon
+          icon="akar-icons:github-fill"></iconify-icon>GitHub]点击我复制</a>
+      <a href="javascript:void(0);"
+        onclick="copyToClipboard('https://xiaofeisu-pcl2.pages.dev/Custom.xaml')">[<iconify-icon
+          icon="logos:cloudflare-icon"></iconify-icon>Cloudflare加速]点击我复制</a>
+    </p>
+    <p>6.关闭PCL2重新打开就可以了</p>
   </div>
   <img alt="今日诗词" src="https://v2.jinrishici.com/one.svg" style="max-width:100%; display: block; margin: 0 auto;">
+  <script>
+    //原神好句api by没用的小废鼠
+    fetch('https://unpkg.com/genshin-good-words/Good-words.txt')
+      .then(response => response.text())
+      .then(data => {
+        const lines = data.split('\n');
+        const randomLine = lines[Math.floor(Math.random() * lines.length)];
+        document.getElementById('ys').innerText = randomLine;
+      })
+      .catch(error => {
+        console.error('Error fetching ys:', error);
+      });
+
+  </script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
+
 </html>
