@@ -92,9 +92,15 @@
         Text="刷新主页" EventType="刷新主页" EventData="刷新主页" />
     </StackPanel>
     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10,0,0">
-      <local:MyListItem Margin="-2,0,0,0" Logo="https://ymh0000123.github.io/ico.png"
+      <local:MyListItem Margin="-2,0,0,0" Logo="https://xiaofeishu-picture.pages.dev/picture/5.png"
         Title="没用的小废鼠的网站" Info="欲买桂花同载酒...只可惜故人，何日再见呢?" EventType="打开网页"
         EventData="https://ymh0000123.github.io" Type="Clickable" />
     </StackPanel>
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10,0,0">
+      <local:MyListItem Margin="-2,0,0,0" Logo="https://xiaofeishu-picture.pages.dev/picture/5.png"
+        Title="PCL2主页" Info="Cloudflare Pages镜像" EventType="打开网页"
+        EventData="https://xiaofeisu-pcl2.pages.dev/" Type="Clickable" />
+    </StackPanel>
+    <local:MyHint Text="PCL2主页使用Cloudflare Pages和Github Pages强力驱动。" />
   </StackPanel>
 </local:MyCard>
