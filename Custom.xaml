@@ -101,6 +101,6 @@
         Title="PCL2主页" Info="Cloudflare Pages镜像" EventType="打开网页"
         EventData="https://xiaofeisu-pcl2.pages.dev/" Type="Clickable" />
     </StackPanel>
-    <local:MyHint Text="PCL2主页使用Cloudflare Pages和Github Pages强力驱动。" />
+    <local:MyHint IsWarn="False" Text="PCL2主页使用Cloudflare Pages和Github Pages强力驱动。" />
   </StackPanel>
 </local:MyCard>
