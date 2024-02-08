@@ -6,6 +6,6 @@ if (currentDate.getMonth() === 1) {
   // 添加引入 China Lantern 的脚本标签
   var scriptTag = document.createElement("script");
   scriptTag.src =
-    "https://raw.kkgithub.com/fz6m/china-lantern/master/dist/china-lantern.min.js";
+    "https://github.moeyy.xyz/https://raw.githubusercontent.com/fz6m/china-lantern/master/dist/china-lantern.min.js";
   document.head.appendChild(scriptTag);
 }
